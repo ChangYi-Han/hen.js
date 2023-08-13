@@ -478,8 +478,8 @@ $.extend(Controller, {
         centerX = Math.ceil(availWidth / 2 / nodeSize);
         centerY = Math.floor(height / 2 / nodeSize);
 
-        this.setStartPos(centerX - 5, centerY);
-        this.setEndPos(centerX + 5, centerY);
+        this.setStartPos(3,4);//(centerX - 5, centerY);
+        this.setEndPos(6,4);//(centerX + 5, centerY);
     },
     setStartPos: function(gridX, gridY) {
         this.startX = gridX;

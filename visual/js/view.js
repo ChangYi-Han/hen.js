@@ -124,7 +124,7 @@ var View = {
                 this.nodeSize,
                 this.nodeSize
             ).attr(this.nodeStyle.normal)
-             .animate(this.nodeStyle.start, 1000);
+             .animate(this.nodeStyle.start, 10);
         } else {
             this.startNode.attr({ x: coord[0], y: coord[1] }).toFront();
         }
@@ -138,7 +138,7 @@ var View = {
                 this.nodeSize,
                 this.nodeSize
             ).attr(this.nodeStyle.normal)
-             .animate(this.nodeStyle.end, 1000);
+             .animate(this.nodeStyle.end, 10);
         } else {
             this.endNode.attr({ x: coord[0], y: coord[1] }).toFront();
         }

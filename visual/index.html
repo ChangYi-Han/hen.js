@@ -100,7 +100,6 @@
       <button id="button1" class="control_button">Start Search</button>
       <button id="button2" class="control_button">Pause Search</button>
       <button id="button3" class="control_button">Clear Walls</button>
-      <button onclick="setblockfirst()">set block</button>
     </div>
 
     <div id="stats"></div>
@@ -108,6 +107,9 @@
     <footer>
       Project Hosted on <a href="https://github.com/ChangYi-Han/hen.js/blob/master/visual/index.html">Github</a>
     </footer>
+    document.addEventListener('DOMContentLoaded', function() {
+    setblockfirst(); 
+    });
 
   </body>
 </html>

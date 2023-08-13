@@ -26,6 +26,15 @@
     <script type="text/javascript" src="./js/controller.js"></script>
     <script type="text/javascript" src="./js/panel.js"></script>
     <script type="text/javascript" src="./js/main.js"></script>
+    <script>
+      function setblockfirst()
+        {
+          for(int i=1;i<=2;i++)
+          {
+          this.setWalkableAt(i, i, false);
+          }
+        }
+    </script>
   </head>
   <body>
     <div id="draw_area"></div>
@@ -91,6 +100,7 @@
       <button id="button1" class="control_button">Start Search</button>
       <button id="button2" class="control_button">Pause Search</button>
       <button id="button3" class="control_button">Clear Walls</button>
+      <button onclick="setblockfirst()">set block</button>
     </div>
 
     <div id="stats"></div>

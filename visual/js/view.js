@@ -52,8 +52,8 @@ var View = {
     },
     supportedOperations: ['opened', 'closed', 'tested'],
     init: function(opts) {
-        this.numCols      = opts.numCols;
-        this.numRows      = opts.numRows;
+        this.numCols      = 13; //opts.numCols;
+        this.numRows      = 13; //opts.numRows;
         this.paper        = Raphael('draw_area');
         this.$stats       = $('#stats');
     },

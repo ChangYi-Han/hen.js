@@ -52,8 +52,8 @@ var View = {
     },
     supportedOperations: ['opened', 'closed', 'tested'],
     init: function(opts) {
-        this.numCols      = 13; //opts.numCols;
-        this.numRows      = 13; //opts.numRows;
+        this.numCols      = opts.numCols;
+        this.numRows      = opts.numRows;
         this.paper        = Raphael('draw_area');
         this.$stats       = $('#stats');
     },
@@ -70,8 +70,8 @@ var View = {
             createRowTask, sleep, tasks,
             nodeSize    = this.nodeSize,
             normalStyle = this.nodeStyle.normal,
-            numCols     = this.numCols,
-            numRows     = this.numRows,
+            numCols     = 20,//this.numCols,
+            numRows     = 20,//this.numRows,
             paper       = this.paper,
             rects       = this.rects = [],
             $stats      = this.$stats;

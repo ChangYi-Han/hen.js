@@ -505,12 +505,3 @@ $.extend(Controller, {
         return this.isStartPos(gridX, gridY) || this.isEndPos(gridX, gridY);
     },
 });
-function setblockfirst()
-        {
-          for(let i=1;i<=2;i++)
-          {
-          this.setWalkableAt(i, i, false);
-          }
-        }
- document.addEventListener('DOMContentLoaded', function() {
- setblockfirst(); 

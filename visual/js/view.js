@@ -15,7 +15,7 @@ var View = {
         },
         start: {
             fill: '#e40',
-            'stroke-opacity': 0.2,
+            'stroke-opacity': 0.2, // 
         },
         end: {
             fill: '#0d0',

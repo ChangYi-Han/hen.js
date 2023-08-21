@@ -71,7 +71,7 @@ var View = {
             nodeSize    = this.nodeSize,
             normalStyle = this.nodeStyle.normal,
             numCols     = 20,//this.numCols,
-            numRows     = 20,//this.numRows,
+            numRows     = 25,//this.numRows,
             paper       = this.paper,
             rects       = this.rects = [],
             $stats      = this.$stats;

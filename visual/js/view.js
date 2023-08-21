@@ -14,11 +14,11 @@ var View = {
             'stroke-opacity': 0.2,
         },
         start: {
-            fill: '#0d0',
+            fill: '#e40',
             'stroke-opacity': 0.2,
         },
         end: {
-            fill: '#e40',
+            fill: '#0d0',
             'stroke-opacity': 0.2,
         },
         opened: {

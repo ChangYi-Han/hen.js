@@ -587,6 +587,16 @@ $.extend(Controller, {
         this.setWalkableAt(11, 11, false)
         this.setWalkableAt(12, 11, false)
         this.setWalkableAt(13, 11, false)
+//room
+        this.setWalkableAt(2, 4, false)
+        this.setWalkableAt(2, 7, false)
+        this.setWalkableAt(6, 0, false)
+        this.setWalkableAt(9, 0, false)
+        this.setWalkableAt(14, 4, false)
+        this.setWalkableAt(14, 7, false)
+        this.setWalkableAt(6, 12, false)
+        this.setWalkableAt(9, 12, false)
+//exit
     },
     setStartPos: function(gridX, gridY) {
         this.startX = gridX;

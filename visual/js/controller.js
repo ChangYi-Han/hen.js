@@ -480,6 +480,7 @@ $.extend(Controller, {
 
         this.setStartPos(3,4);//(centerX - 5, centerY);
         this.setEndPos(6,4);//(centerX + 5, centerY);
+        this.setWalkableAt(10, 10, false)
     },
     setStartPos: function(gridX, gridY) {
         this.startX = gridX;

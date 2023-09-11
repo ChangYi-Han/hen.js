@@ -631,3 +631,4 @@ $.extend(Controller, {
         return this.isStartPos(gridX, gridY) || this.isEndPos(gridX, gridY);
     },
 });
+//此為controller.js

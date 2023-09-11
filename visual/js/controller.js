@@ -480,6 +480,7 @@ $.extend(Controller, {
 
         this.setStartPos(3,4);//(centerX - 5, centerY);
         this.setEndPos(6,4);//(centerX + 5, centerY);
+        this.setFirePos(12,2);
         this.setWalkableAt(3, 1, false)
         this.setWalkableAt(4, 1, false)
         this.setWalkableAt(5, 1, false)
@@ -607,6 +608,11 @@ $.extend(Controller, {
         this.endX = gridX;
         this.endY = gridY;
         View.setEndPos(gridX, gridY);
+    },
+    setFirePos: function(gridX, gridY) {
+        this.fireX = gridX;
+        this.fireY = gridY;
+        View.setFirePos(gridX, gridY);
     },
     setWalkableAt: function(gridX, gridY, walkable) {
         this.grid.setWalkableAt(gridX, gridY, walkable);

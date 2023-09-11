@@ -485,7 +485,7 @@ $.extend(Controller, {
         this.setWalkableAt(5, 1, false)
         
         this.setWalkableAt(3, 2, false)
-        this.setWalkableAt(4, 2, false)
+        //this.setWalkableAt(4, 2, false)
         this.setWalkableAt(5, 2, false)
         
         this.setWalkableAt(3, 3, false)
@@ -497,7 +497,7 @@ $.extend(Controller, {
         this.setWalkableAt(9, 1, false)
 
         this.setWalkableAt(7, 2, false)
-        this.setWalkableAt(8, 2, false)
+        //this.setWalkableAt(8, 2, false)
         this.setWalkableAt(9, 2, false)
 
         this.setWalkableAt(7, 3, false)
@@ -509,7 +509,7 @@ $.extend(Controller, {
         this.setWalkableAt(13, 1, false)
 
         this.setWalkableAt(11, 2, false)
-        this.setWalkableAt(12, 2, false)
+        //this.setWalkableAt(12, 2, false)
         this.setWalkableAt(13, 2, false)
 
         this.setWalkableAt(11, 3, false)
@@ -521,7 +521,7 @@ $.extend(Controller, {
         this.setWalkableAt(5, 5, false)
         
         this.setWalkableAt(3, 6, false)
-        this.setWalkableAt(4, 6, false)
+        //this.setWalkableAt(4, 6, false)
         this.setWalkableAt(5, 6, false)
         
         this.setWalkableAt(3, 7, false)
@@ -533,7 +533,7 @@ $.extend(Controller, {
         this.setWalkableAt(9, 5, false)
 
         this.setWalkableAt(7, 6, false)
-        this.setWalkableAt(8, 6, false)
+        //this.setWalkableAt(8, 6, false)
         this.setWalkableAt(9, 6, false)
 
         this.setWalkableAt(7, 7, false)
@@ -545,7 +545,7 @@ $.extend(Controller, {
         this.setWalkableAt(13, 5, false)
 
         this.setWalkableAt(11, 6, false)
-        this.setWalkableAt(12, 6, false)
+        //this.setWalkableAt(12, 6, false)
         this.setWalkableAt(13, 6, false)
 
         this.setWalkableAt(11, 7, false)
@@ -557,7 +557,7 @@ $.extend(Controller, {
         this.setWalkableAt(5, 9, false)
         
         this.setWalkableAt(3, 10, false)
-        this.setWalkableAt(4, 10, false)
+        //this.setWalkableAt(4, 10, false)
         this.setWalkableAt(5, 10, false)
         
         this.setWalkableAt(3, 11, false)
@@ -569,7 +569,7 @@ $.extend(Controller, {
         this.setWalkableAt(9, 9, false)
 
         this.setWalkableAt(7, 10, false)
-        this.setWalkableAt(8, 10, false)
+        //this.setWalkableAt(8, 10, false)
         this.setWalkableAt(9, 10, false)
 
         this.setWalkableAt(7, 11, false)
@@ -581,7 +581,7 @@ $.extend(Controller, {
         this.setWalkableAt(13, 9, false)
 
         this.setWalkableAt(11, 10, false)
-        this.setWalkableAt(12, 10, false)
+        //this.setWalkableAt(12, 10, false)
         this.setWalkableAt(13, 10, false)
 
         this.setWalkableAt(11, 11, false)

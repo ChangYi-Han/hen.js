@@ -351,3 +351,4 @@ var View = {
         return coords;
     },
 };
+//此為view.js

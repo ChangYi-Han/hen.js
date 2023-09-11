@@ -14,7 +14,7 @@ var View = {
             'stroke-opacity': 0.2,
         },
         start: {
-            fill: '#e40',
+            fill: 'pink',
             'stroke-opacity': 0.2, // 
         },
         end: {

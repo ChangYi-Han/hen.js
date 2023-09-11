@@ -521,7 +521,7 @@ $.extend(Controller, {
         this.setWalkableAt(5, 5, false)
         
         this.setWalkableAt(3, 6, false)
-        this.setWalkableAt(4, 6, false)
+        //this.setWalkableAt(4, 6, false)
         this.setWalkableAt(5, 6, false)
         
         this.setWalkableAt(3, 7, false)
@@ -533,7 +533,7 @@ $.extend(Controller, {
         this.setWalkableAt(9, 5, false)
 
         this.setWalkableAt(7, 6, false)
-        //this.setWalkableAt(8, 6, false)
+        this.setWalkableAt(8, 6, false)
         this.setWalkableAt(9, 6, false)
 
         this.setWalkableAt(7, 7, false)

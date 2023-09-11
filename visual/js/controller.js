@@ -624,6 +624,9 @@ $.extend(Controller, {
     isEndPos: function(gridX, gridY) {
         return gridX === this.endX && gridY === this.endY;
     },
+    isFirePos: function(gridX, gridY) {
+        return gridX === this.fireX && gridY === this.fireY;
+    },
     isStartOrEndPos: function(gridX, gridY) {
         return this.isStartPos(gridX, gridY) || this.isEndPos(gridX, gridY);
     },

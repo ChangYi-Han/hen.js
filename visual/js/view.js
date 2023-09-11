@@ -21,6 +21,10 @@ var View = {
             fill: '#0d0',
             'stroke-opacity': 0.2,
         },
+        fire: {
+            fill: 'red',
+            'stroke-opacity': 0.2,
+        },
         opened: {
             fill: '#98fb98',
             'stroke-opacity': 0.2,
@@ -141,6 +145,20 @@ var View = {
              .animate(this.nodeStyle.end, 10);
         } else {
             this.endNode.attr({ x: coord[0], y: coord[1] }).toFront();
+        }
+    },
+    setFirePos: function(gridX, gridY) {
+        var coord = this.toPageCoordinate(gridX, gridY);
+        if (!this.fireNode) {
+            this.fireNode = this.paper.rect(
+                coord[0],
+                coord[1],
+                this.nodeSize,
+                this.nodeSize
+            ).attr(this.nodeStyle.normal)
+             .animate(this.nodeStyle.start, 10);
+        } else {
+            this.fireNode.attr({ x: coord[0], y: coord[1] }).toFront();
         }
     },
     /**

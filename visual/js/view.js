@@ -156,7 +156,7 @@ var View = {
                 this.nodeSize,
                 this.nodeSize
             ).attr(this.nodeStyle.normal)
-             .animate(this.nodeStyle.start, 10);
+             .animate(this.nodeStyle.fire, 10);
         } else {
             this.fireNode.attr({ x: coord[0], y: coord[1] }).toFront();
         }

@@ -28,10 +28,9 @@
     <script type="text/javascript" src="./js/main.js"></script>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
-    // 確保 controller.js 中的 setWalkableAt 函式已經被定義
-    // 如果 controller.js 中的 setWalkableAt 函式是全域可用的，您可以直接呼叫/
-    // 如果不是全域函式，您可能需要將其從適當的對象中呼叫
-    this.setWalkableAt(16, 16, false); // 呼叫 setWalkableAt 函式
+    // 確保 Controller.js 已經被載入並且初始化
+    Controller.setWalkableAt(16, 16, false);
+    Controller.setWalkableAt(20, 20, false);
 });
 
 

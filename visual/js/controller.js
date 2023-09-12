@@ -639,10 +639,10 @@ $.extend(Controller, {
               var number = response.field1;
               input.value = number;
               if (number === "1") {
-                this.setWalkableAt(1, 1, false)
+                this.setWalkableAt(1, 1, false);
               }
               else if (number === "2") {
-                this.setWalkableAt(0, 0, false)
+                this.setWalkableAt(0, 0, false);
               }
             }
           };

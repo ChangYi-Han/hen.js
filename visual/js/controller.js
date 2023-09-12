@@ -349,6 +349,23 @@ $.extend(Controller, {
                 return;
             }
             Controller.step();
+            var url = "https://api.thingspeak.com/channels/2096127/fields/" + fieldId + "/last.json?api_key=" + apiKey;
+              var xhr = new XMLHttpRequest();
+              xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                  var response = JSON.parse(xhr.responseText);
+                  var number = response.field1;
+                  input.value = number;
+                  if (number === "1") {
+                    this.setWalkableAt(1, 1, false);
+                  }
+                  else if (number === "2") {
+                    this.setWalkableAt(0, 0, false);
+                  }
+                }
+              };
+          xhr.open("GET", url, true);
+          xhr.send();
             setTimeout(loop, interval);
         })();
     },
@@ -630,25 +647,9 @@ $.extend(Controller, {
     isStartOrEndPos: function(gridX, gridY) {
         return this.isStartPos(gridX, gridY) || this.isEndPos(gridX, gridY) || this.isFirePos(gridX, gridY);
     },
-    updateValue: function() {
-          var url = "https://api.thingspeak.com/channels/2096127/fields/" + fieldId + "/last.json?api_key=" + apiKey;
-          var xhr = new XMLHttpRequest();
-          xhr.onreadystatechange = function() {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-              var response = JSON.parse(xhr.responseText);
-              var number = response.field1;
-              input.value = number;
-              if (number === "1") {
-                this.setWalkableAt(1, 1, false);
-              }
-              else if (number === "2") {
-                this.setWalkableAt(0, 0, false);
-              }
-            }
-          };
-          xhr.open("GET", url, true);
-          xhr.send();
-    },
+    
+          
+    
 
 });
 //此為controller.js

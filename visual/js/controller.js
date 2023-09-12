@@ -349,6 +349,7 @@ $.extend(Controller, {
                 return;
             }
             Controller.step();
+            var fieldId =1;
             var url = "https://api.thingspeak.com/channels/2096127/fields/" + fieldId + "/last.json?api_key=" + apiKey;
               var xhr = new XMLHttpRequest();
               xhr.onreadystatechange = function() {

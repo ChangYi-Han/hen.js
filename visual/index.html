@@ -23,17 +23,27 @@
     <script type="text/javascript" src="./lib/pathfinding-browser.min.js"></script>
 
     <script type="text/javascript" src="./js/view.js"></script>
-    <script type="text/javascript" src="./js/controller.js">
-    Controller.setWalkableAt(1,1,false);
-    
-            Controller.clearOperations();
-            Controller.clearAll();
-            Controller.buildNewGrid();
-    
-    </script>
+    <script type="text/javascript" src="./js/controller.js"></script>
     <script type="text/javascript" src="./js/panel.js"></script>
     <script type="text/javascript" src="./js/main.js"></script>
+    <script>
+      // 创建一个自定义的鼠标点击事件
+    var clickEvent = new MouseEvent('click', {
+      view: window,
+      bubbles: true,
+      cancelable: true
+    });
 
+    // 获取指定坐标位置上的元素
+    var targetElement = document.elementFromPoint(1, 1); // 将 x 和 y 替换为实际的坐标值
+    
+    // 触发点击事件
+    if (targetElement) {
+      targetElement.dispatchEvent(clickEvent);
+    }
+
+
+    </script>
 <style>
 body {
     background-image: url("https://hackmd.io/_uploads/SJa1cRxpn.png");

@@ -27,9 +27,17 @@
     <script type="text/javascript" src="./js/panel.js"></script>
     <script type="text/javascript" src="./js/main.js"></script>
     <script>
-    window.onload=function(){
+    var input = document.getElementById("number1Input");
+    input.value = number;
+    if (number === 1) {
+        Controller.setWalkableAt(1, 1, false);
+    } else if (number === 2) {
+        Controller.setWalkableAt(0, 0, false);
+
+    
+    /*window.onload=function(){
     Controller.setWalkableAt(1,1,false);
-    };
+    };*/
     </script>
 <style>
 body {
@@ -77,6 +85,6 @@ body {
     <footer>
       Project Hosted on <a href="https://github.com/ChangYi-Han/hen.js/blob/master/visual/index.html">Github</a>
     </footer>
-   
+   <input type="text" id="number1Input" />
   </body>
 </html>  //此為index.html

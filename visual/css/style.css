@@ -5,6 +5,7 @@ body {
 }
 
 input {
+    margin-top: -20px; /* 或者根據需要調整數值 */
     cursor: pointer;
 }
 

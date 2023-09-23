@@ -23,14 +23,13 @@
     <script type="text/javascript" src="./lib/pathfinding-browser.min.js"></script>
 
     <script type="text/javascript" src="./js/view.js"></script>
-    <script type="text/javascript" src="./js/controller.js">
-    Controller.setWalkableAt(1,1,false)
-    Controller.onrestart()
-    </script>
+    <script type="text/javascript" src="./js/controller.js"></script>
     <script type="text/javascript" src="./js/panel.js"></script>
     <script type="text/javascript" src="./js/main.js"></script>
     <script>
-   
+    window.onload=function(){
+    Controller.setWalkableAt(1,1,false);
+    };
     </script>
 <style>
 body {

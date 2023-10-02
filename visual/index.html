@@ -28,10 +28,19 @@
     <script type="text/javascript" src="./js/main.js"></script>
     <script>
    
-    
-    window.onload=function(){
-    Controller.setWalkableAt(1,1,false);
+    window.onload = function() {
+        document.getElementById('number1Input').addEventListener('change', function() {
+          var value = parseInt(this.value);
+          if (value === 1) {
+            Controller.setWalkableAt(1, 1, false);
+          } else if (value === 2) {
+            Controller.setWalkableAt(0, 0, false);
+          }
+        });
     };
+    /*window.onload=function(){
+    Controller.setWalkableAt(1,1,false);
+    };*/
     </script>
 <style>
 body {

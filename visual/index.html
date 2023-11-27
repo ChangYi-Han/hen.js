@@ -29,17 +29,45 @@
     <script>
    
     window.onload = function() {
-        document.getElementById('number1Input').addEventListener('change', function() {
-        var value = parseInt(this.value);
-        if (value === 1) {
-          Controller.setWalkableAt(1, 1, false);
-          Controller.setWalkableAt(0, 0, true);
+        //document.getElementById('number1Input').addEventListener('change', function() {
+        //var value = parseInt(this.value);
+        var input = document.getElementById("number1Input");
+        
+        // 設定 API Key 和 Field ID
+        var apiKey = "WMHQWWZOEF3ZGIX1";
+        var fieldId = "1";
+        
+        // 建立一個函數來取得 ThingSpeak 最新的數值
+        function updateValue() {
+          var url = "https://api.thingspeak.com/channels/2096127/fields/" + fieldId + "/last.json?api_key=" + apiKey;
+          var xhr = new XMLHttpRequest();
+          xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+              var response = JSON.parse(xhr.responseText);
+              var value = response.field1;
+              input.value = value;
+              if (value === 1) {
+                Controller.setWalkableAt(1, 1, false);
+                Controller.setWalkableAt(0, 0, true);
+              }
+              
+              if (value === 2) {
+                Controller.setWalkableAt(1, 1, true);
+                Controller.setWalkableAt(0, 0, false);
+              }
+            }
+          };
+          xhr.open("GET", url, true);
+          xhr.send();
         }
         
-        if (value === 2) {
-          Controller.setWalkableAt(1, 1, true);
-          Controller.setWalkableAt(0, 0, false);
-        }
+        // 初次載入時更新一次數值
+        updateValue();
+        
+        // 每 10 秒更新一次數值
+        setInterval(updateValue, 10000);
+
+        
 
         });
     };

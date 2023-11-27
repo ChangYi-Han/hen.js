@@ -27,6 +27,8 @@
     <script type="text/javascript" src="./js/panel.js"></script>
     <script type="text/javascript" src="./js/main.js"></script>
 <script>
+window.onload = function () {
+    // 在這裡確保 HTML 文檔完全載入後再執行代碼
     var input = document.getElementById("number1Input");
 
     // 設定 API Key 和 Field ID
@@ -41,7 +43,11 @@
             if (xhr.readyState === 4 && xhr.status === 200) {
                 var response = JSON.parse(xhr.responseText);
                 var value = response.field1;
-                input.value = value;
+
+                // 確保 input 元素存在再設置其值
+                if (input) {
+                    input.value = value;
+                }
 
                 if (value === 1) {
                     Controller.setWalkableAt(1, 1, false);
@@ -60,13 +66,13 @@
         xhr.send();
     }
 
-    window.onload = function () {
-        // 初次載入時更新一次數值
-        updateValue();
+    // 初次載入時更新一次數值
+    updateValue();
 
-        // 每 10 秒更新一次數值
-        setInterval(updateValue, 10000);
-    };
+    // 每 10 秒更新一次數值
+    setInterval(updateValue, 10000);
+};
+
 </script>
 
 <style>

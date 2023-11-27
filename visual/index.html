@@ -33,6 +33,18 @@ window.onload = function () {
     var apiKey = "WMHQWWZOEF3ZGIX1";
     var fieldId = "1";
 
+    function updateController(value) {
+        if (value === 1) {
+            Controller.setWalkableAt(1, 1, false);
+            Controller.setWalkableAt(0, 0, true);
+        }
+
+        if (value === 2) {
+            Controller.setWalkableAt(1, 1, true);
+            Controller.setWalkableAt(0, 0, false);
+        }
+    }
+
     function updateValue() {
         var url = "https://api.thingspeak.com/channels/2096127/fields/" + fieldId + "/last.json?api_key=" + apiKey;
         var xhr = new XMLHttpRequest();
@@ -45,15 +57,7 @@ window.onload = function () {
                     input.value = value;
                 }
 
-                if (value === 1) {
-                    Controller.setWalkableAt(1, 1, false);
-                    Controller.setWalkableAt(0, 0, true);
-                }
-
-                if (value === 2) {
-                    Controller.setWalkableAt(1, 1, true);
-                    Controller.setWalkableAt(0, 0, false);
-                }
+                updateController(value);
             }
         };
 
@@ -67,23 +71,14 @@ window.onload = function () {
     // 使用 addEventListener 監聽 input 的 change 事件
     input.addEventListener('change', function() {
         var value = parseInt(this.value);
-
-        if (value === 1) {
-            Controller.setWalkableAt(1, 1, false);
-            Controller.setWalkableAt(0, 0, true);
-        }
-
-        if (value === 2) {
-            Controller.setWalkableAt(1, 1, true);
-            Controller.setWalkableAt(0, 0, false);
-        }
+        updateController(value);
     });
 
     // 使用 setInterval 定期更新數值
     setInterval(updateValue, 10000);
 };
 
-    </script>
+</script>
 <style>
 body {
     background-image: url("https://hackmd.io/_uploads/SJa1cRxpn.png");

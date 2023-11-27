@@ -27,25 +27,62 @@
     <script type="text/javascript" src="./js/panel.js"></script>
     <script type="text/javascript" src="./js/main.js"></script>
     <script>
-   
-    window.onload = function() {
-        document.getElementById('number1Input').addEventListener('change', function() {
+window.onload = function () {
+    var input = document.getElementById("number1Input");
+
+    var apiKey = "WMHQWWZOEF3ZGIX1";
+    var fieldId = "1";
+
+    function updateValue() {
+        var url = "https://api.thingspeak.com/channels/2096127/fields/" + fieldId + "/last.json?api_key=" + apiKey;
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                var response = JSON.parse(xhr.responseText);
+                var value = response.field1;
+
+                if (input) {
+                    input.value = value;
+                }
+
+                if (value === 1) {
+                    Controller.setWalkableAt(1, 1, false);
+                    Controller.setWalkableAt(0, 0, true);
+                }
+
+                if (value === 2) {
+                    Controller.setWalkableAt(1, 1, true);
+                    Controller.setWalkableAt(0, 0, false);
+                }
+            }
+        };
+
+        xhr.open("GET", url, true);
+        xhr.send();
+    }
+
+    // 初次載入時更新一次數值
+    updateValue();
+
+    // 使用 addEventListener 監聽 input 的 change 事件
+    input.addEventListener('change', function() {
         var value = parseInt(this.value);
+
         if (value === 1) {
-          Controller.setWalkableAt(1, 1, false);
-          Controller.setWalkableAt(0, 0, true);
-        }
-        
-        if (value === 2) {
-          Controller.setWalkableAt(1, 1, true);
-          Controller.setWalkableAt(0, 0, false);
+            Controller.setWalkableAt(1, 1, false);
+            Controller.setWalkableAt(0, 0, true);
         }
 
-        });
-    };
-    /*window.onload=function(){
-    Controller.setWalkableAt(1,1,false);
-    };*/
+        if (value === 2) {
+            Controller.setWalkableAt(1, 1, true);
+            Controller.setWalkableAt(0, 0, false);
+        }
+    });
+
+    // 使用 setInterval 定期更新數值
+    setInterval(updateValue, 10000);
+};
+
     </script>
 <style>
 body {

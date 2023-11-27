@@ -36,30 +36,34 @@ window.onload = function () {
     var fieldId = "1";
 
     // 建立一個函數來取得 ThingSpeak 最新的數值
-    function updateValue() {
-        var url = "https://api.thingspeak.com/channels/2096127/fields/" + fieldId + "/last.json?api_key=" + apiKey;
-        var xhr = new XMLHttpRequest();
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                var response = JSON.parse(xhr.responseText);
-                var value = response.field1;
+function updateValue() {
+    var url = "https://api.thingspeak.com/channels/2096127/fields/" + fieldId + "/last.json?api_key=" + apiKey;
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            var response = JSON.parse(xhr.responseText);
+            var value = response.field1;
 
-                // 確保 input 元素存在再設置其值
-                if (input) {
-                    input.value = value;
-                }
+            // 確保 input 元素存在再設置其值
+            if (input) {
+                input.value = value;
 
+                // 根據檢索到的值修改可走性
                 if (value === 1) {
                     Controller.setWalkableAt(1, 1, false);
                     Controller.setWalkableAt(0, 0, true);
-                }
-
-                if (value === 2) {
+                } else if (value === 2) {
                     Controller.setWalkableAt(1, 1, true);
                     Controller.setWalkableAt(0, 0, false);
                 }
             }
-        };
+        }
+    };
+
+    xhr.open("GET", url, true);
+    xhr.send();
+}
+
 
         // 移到這裡
         xhr.open("GET", url, true);

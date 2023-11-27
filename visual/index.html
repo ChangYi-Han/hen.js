@@ -27,10 +27,6 @@
     <script type="text/javascript" src="./js/panel.js"></script>
     <script type="text/javascript" src="./js/main.js"></script>
     <script>
-   
-    window.onload = function() {
-        //document.getElementById('number1Input').addEventListener('change', function() {
-        //var value = parseInt(this.value);
         var input = document.getElementById("number1Input");
         
         // 設定 API Key 和 Field ID
@@ -46,6 +42,17 @@
               var response = JSON.parse(xhr.responseText);
               var value = response.field1;
               input.value = value;
+            }
+            xhr.open("GET", url, true);
+            xhr.send();
+          }
+        }
+      xhr.open("GET", url, true);
+          xhr.send();
+    window.onload = function() {
+        //document.getElementById('number1Input').addEventListener('change', function() {
+        //var value = parseInt(this.value);
+
               if (value === 1) {
                 Controller.setWalkableAt(1, 1, false);
                 Controller.setWalkableAt(0, 0, true);
@@ -55,11 +62,10 @@
                 Controller.setWalkableAt(1, 1, true);
                 Controller.setWalkableAt(0, 0, false);
               }
-            }
-          };
-          xhr.open("GET", url, true);
-          xhr.send();
-        }
+            
+          
+          
+        };
         
         // 初次載入時更新一次數值
         updateValue();
@@ -69,7 +75,7 @@
 
         
 
-        };
+        
     
     /*window.onload=function(){
     Controller.setWalkableAt(1,1,false);

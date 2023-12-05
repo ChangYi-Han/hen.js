@@ -138,7 +138,9 @@ footer {
 .red {
     color: #ff9166;
 }
-
+.pink {
+    color: pink;
+  }
 .spinner {
     width: 2em;
 }

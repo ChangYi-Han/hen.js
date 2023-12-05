@@ -35,6 +35,7 @@ window.onload = function () {
         if (value === 1) {
             Controller.setFirePos(12,2);
             Controller.setEndPos(0,0);
+            Controller.setWalkableAt(10, 4, false)
             Controller.setWalkableAt(2, 4, false)
             Controller.setWalkableAt(2, 8, false)
             Controller.setWalkableAt(10, 0, false)
@@ -50,7 +51,7 @@ window.onload = function () {
         if (value === 2) {
             Controller.setFirePos(12,2);
             Controller.setEndPos(0,0);
-            
+            Controller.setWalkableAt(10, 4, false)
             Controller.setWalkableAt(2, 8, false)
             Controller.setWalkableAt(6, 0, false);
             Controller.setWalkableAt(10, 0, false)
@@ -65,7 +66,7 @@ window.onload = function () {
         if (value === 3) {
             Controller.setFirePos(12,2);
             Controller.setEndPos(0,0);
-            
+            Controller.setWalkableAt(10, 4, false)v
             Controller.setWalkableAt(2, 4, false)
             Controller.setWalkableAt(6, 0, false);
             Controller.setWalkableAt(10, 0, false)
@@ -80,7 +81,7 @@ window.onload = function () {
         if (value === 4) {
             Controller.setFirePos(12,2);
             Controller.setEndPos(0,0);
-            
+            Controller.setWalkableAt(10, 4, false)
             Controller.setWalkableAt(2, 8, false)
             Controller.setWalkableAt(6, 0, false);
             Controller.setWalkableAt(10, 0, false)
@@ -95,7 +96,7 @@ window.onload = function () {
         if (value === 5) {
             Controller.setFirePos(12,2);
             Controller.setEndPos(0,0);
-            
+            Controller.setWalkableAt(10, 4, false)
             Controller.setWalkableAt(2, 8, false)
             Controller.setWalkableAt(6, 0, false);
             Controller.setWalkableAt(10, 0, false)
@@ -110,7 +111,7 @@ window.onload = function () {
         if (value === 6) {
             Controller.setFirePos(12,2);
             Controller.setEndPos(0,0);
-            
+            Controller.setWalkableAt(10, 4, false)
             Controller.setWalkableAt(2, 8, false)
             Controller.setWalkableAt(6, 0, false);
             Controller.setWalkableAt(10, 0, false)
@@ -137,22 +138,8 @@ window.onload = function () {
             Controller.setWalkableAt(10, 0, true);
             Controller.setEndPos(10,0);
         }
-        if (value === 8) {
-            Controller.setFirePos(8,6);
-            Controller.setEndPos(0,0);
-            
-            Controller.setWalkableAt(2, 8, false)
-            Controller.setWalkableAt(6, 0, false);
-            Controller.setWalkableAt(14, 8, false)
-            Controller.setWalkableAt(10, 0, false)
-            Controller.setWalkableAt(2, 4, false)
-            Controller.setWalkableAt(6, 12, false)
-            Controller.setWalkableAt(10, 12, false)
-              
-            Controller.setWalkableAt(14, 4, true);
-            Controller.setEndPos(14,4);
-        }
-         if (value === 9) {
+     
+         if (value === 8) {
             Controller.setFirePos(8,6);
             Controller.setEndPos(0,0);
             Controller.setWalkableAt(2, 4, false)
@@ -167,7 +154,7 @@ window.onload = function () {
             Controller.setEndPos(6,0);          
         }
 
-        if (value === 10) {
+        if (value === 9) {
             Controller.setFirePos(8,6);
             Controller.setEndPos(0,0);
             
@@ -182,7 +169,7 @@ window.onload = function () {
             Controller.setWalkableAt(2, 4, true);
             Controller.setEndPos(2,4);
         }
-        if (value === 11) {
+        if (value === 10) {
             Controller.setFirePos(8,6);
             Controller.setEndPos(0,0);
             
@@ -197,7 +184,7 @@ window.onload = function () {
             Controller.setWalkableAt(2, 8, true);
             Controller.setEndPos(2,8);
         }
-        if (value === 12) {
+        if (value === 11) {
             Controller.setFirePos(8,6);
             Controller.setEndPos(0,0);
             
@@ -212,7 +199,7 @@ window.onload = function () {
             Controller.setWalkableAt(6, 12, true);
             Controller.setEndPos(6,12);
         }
-        if (value === 13) {
+        if (value === 12) {
             Controller.setFirePos(8,6);
             Controller.setEndPos(0,0);
             
@@ -227,7 +214,7 @@ window.onload = function () {
             Controller.setWalkableAt(10, 12, true);
             Controller.setEndPos(10,12);
         }
-        if (value === 14) {
+        if (value === 13) {
             Controller.setFirePos(8,6);
             Controller.setEndPos(0,0);
             
@@ -241,6 +228,21 @@ window.onload = function () {
               
             Controller.setWalkableAt(14, 8, true);
             Controller.setEndPos(14,8);
+        }
+         if (value === 14) {
+            Controller.setFirePos(8,6);
+            Controller.setEndPos(0,0);
+            
+            Controller.setWalkableAt(2, 8, false)
+            Controller.setWalkableAt(6, 0, false);
+            Controller.setWalkableAt(14, 8, false)
+            Controller.setWalkableAt(10, 0, false)
+            Controller.setWalkableAt(2, 4, false)
+            Controller.setWalkableAt(6, 12, false)
+            Controller.setWalkableAt(10, 12, false)
+              
+            Controller.setWalkableAt(14, 4, true);
+            Controller.setEndPos(14,4);
         }
     }
 

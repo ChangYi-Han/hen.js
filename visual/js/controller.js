@@ -480,8 +480,7 @@ $.extend(Controller, {
         centerY = Math.floor(height / 2 / nodeSize);
 
         this.setStartPos(3,4);//(centerX - 5, centerY);
-        this.setEndPos(6,4);//(centerX + 5, centerY);
-        this.setFirePos(12,2);
+        
         this.setWalkableAt(3, 1, false)
         this.setWalkableAt(4, 1, false)
         this.setWalkableAt(5, 1, false)

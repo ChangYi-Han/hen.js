@@ -35,15 +35,34 @@ window.onload = function () {
 
     function updateController(value) {
         if (value === 1) {
-            Controller.setWalkableAt(1, 1, false);
-            Controller.setWalkableAt(0, 0, true);
-            Controller.setWalkableAt(2, 4, true);
-            Controller.setEndPos(6,4)
+            Controller.setWalkableAt(2, 4, false)
+            Controller.setWalkableAt(2, 8, false)
+            
+            Controller.setWalkableAt(10, 0, false)
+            Controller.setWalkableAt(14, 4, false)
+            Controller.setWalkableAt(14, 8, false)
+            Controller.setWalkableAt(6, 12, false)
+            Controller.setWalkableAt(10, 12, false)
+          
+            Controller.setWalkableAt(6, 0, true);
+            Controller.setEndPos(6,0);
+            
         }
 
         if (value === 2) {
-            Controller.setWalkableAt(1, 1, true);
-            Controller.setWalkableAt(0, 0, false);
+            Controller.setEndPos(0,0);
+            
+            Controller.setWalkableAt(2, 8, false)
+            Controller.setWalkableAt(6, 0, false);
+            Controller.setWalkableAt(10, 0, false)
+            Controller.setWalkableAt(14, 4, false)
+            Controller.setWalkableAt(14, 8, false)
+            Controller.setWalkableAt(6, 12, false)
+            Controller.setWalkableAt(10, 12, false)
+            
+          
+            Controller.setWalkableAt(2, 4, true);
+            Controller.setEndPos(2,4);
         }
     }
 

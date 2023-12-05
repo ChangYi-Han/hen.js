@@ -230,7 +230,7 @@ window.onload = function () {
             Controller.setWalkableAt(14, 8, true);
             Controller.setEndPos(14,8);
         }
-         if (value === 14) {
+        if (value === 14) {
             Controller.setFirePos(8,6);
             Controller.setEndPos(0,0);
             Controller.setWalkableAt(10, 4, true)
@@ -245,6 +245,23 @@ window.onload = function () {
             Controller.setWalkableAt(14, 4, true);
             Controller.setEndPos(14,4);
         }
+        if (value === 15) {
+            Controller.setFirePos(8,10);
+            Controller.setEndPos(0,0);
+            Controller.setWalkableAt(10, 4, true)
+            Controller.setWalkableAt(8, 8, false)
+            Controller.setWalkableAt(2, 8, false)
+            Controller.setWalkableAt(6, 0, false);
+            Controller.setWalkableAt(14, 8, false)
+            Controller.setWalkableAt(14, 4, false)
+            Controller.setWalkableAt(2, 4, false)
+            Controller.setWalkableAt(6, 12, false)
+            Controller.setWalkableAt(10, 12, false)
+              
+            Controller.setWalkableAt(10, 0, true);
+            Controller.setEndPos(10,0);
+        }
+      
     }
 
     function handleResponse(response) {

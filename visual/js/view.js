@@ -25,6 +25,42 @@ var View = {
             fill: 'red',
             'stroke-opacity': 0.2,
         },
+        carrefour: {
+            fill: 'darkblue',
+            'stroke-opacity': 0.2,
+        },
+        apple: {
+            fill: 'black',
+            'stroke-opacity': 0.2,
+        },
+        macdonald: {
+            fill: 'yellow',
+            'stroke-opacity': 0.2,
+        },
+        starbucks: {
+            fill: 'darkgreen',
+            'stroke-opacity': 0.2,
+        },
+        muji: {
+            fill: 'darkred',
+            'stroke-opacity': 0.2,
+        },
+        adidas: {
+            fill: 'blue',
+            'stroke-opacity': 0.2,
+        },
+        nike: {
+            fill: 'black',
+            'stroke-opacity': 0.2,
+        },
+        uniqlo: {
+            fill: 'lightcoral',
+            'stroke-opacity': 0.2,
+        },
+        burger: {
+            fill: 'FFE4B5',
+            'stroke-opacity': 0.2,
+        },
         opened: {
             fill: '#98fb98',
             'stroke-opacity': 0.2,

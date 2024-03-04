@@ -46,7 +46,7 @@ var View = {
             'stroke-opacity': 0.2,
         },
         adidas: {
-            fill: 'blue',
+            fill: 'skyblue',
             'stroke-opacity': 0.2,
         },
         nike: {
@@ -58,7 +58,7 @@ var View = {
             'stroke-opacity': 0.2,
         },
         burger: {
-            fill: 'FFE4B5',
+            fill: 'orange',
             'stroke-opacity': 0.2,
         },
         opened: {

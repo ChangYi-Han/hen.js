@@ -482,11 +482,11 @@ $.extend(Controller, {
         this.setStartPos(3,4);//(centerX - 5, centerY);
         
         this.setWalkableAt(3, 1, false)
-        //this.setWalkableAt(4, 1, false)
+        this.setNikePos(4, 1)
         this.setWalkableAt(5, 1, false)
         
         this.setWalkableAt(3, 2, false)
-        //this.setWalkableAt(4, 2, false)
+        this.setAdidasPos(4, 2)
         this.setWalkableAt(5, 2, false)
         
         this.setWalkableAt(3, 3, false)
@@ -494,11 +494,11 @@ $.extend(Controller, {
         this.setWalkableAt(5, 3, false)
 
         this.setWalkableAt(7, 1, false)
-        //this.setWalkableAt(8, 1, false)
+        this.setApplePos(8, 1)
         this.setWalkableAt(9, 1, false)
 
         this.setWalkableAt(7, 2, false)
-        //this.setWalkableAt(8, 2, false)
+        this.setCarrefourPos(8, 2)
         this.setWalkableAt(9, 2, false)
 
         this.setWalkableAt(7, 3, false)
@@ -506,11 +506,11 @@ $.extend(Controller, {
         this.setWalkableAt(9, 3, false)
         
         this.setWalkableAt(11, 1, false)
-        //this.setWalkableAt(12, 1, false)
+        this.setMujiPos(12, 1)
         this.setWalkableAt(13, 1, false)
 
         this.setWalkableAt(11, 2, false)
-        //this.setWalkableAt(12, 2, false)
+        this.setUniqloPos(12, 2)
         this.setWalkableAt(13, 2, false)
 
         this.setWalkableAt(11, 3, false)
@@ -614,6 +614,52 @@ $.extend(Controller, {
         this.fireY = gridY;
         View.setFirePos(gridX, gridY);
     },
+    setCarrefourPos: function(gridX, gridY) {
+        this.carrefourX = gridX;
+        this.carrefourY = gridY;
+        View.setCarrefourPos(gridX, gridY);
+    },
+    setApplePos: function(gridX, gridY) {
+        this.appleX = gridX;
+        this.appleY = gridY;
+        View.setApplePos(gridX, gridY);
+    },
+    setMacdonaldPos: function(gridX, gridY) {
+        this.macdonaldX = gridX;
+        this.macdonaldY = gridY;
+        View.setMacdonaldPos(gridX, gridY);
+    },
+    setStarbucksPos: function(gridX, gridY) {
+        this.starbucksX = gridX;
+        this.starbucksY = gridY;
+        View.setStarbucksPos(gridX, gridY);
+    },
+    setMujiPos: function(gridX, gridY) {
+        this.mujiX = gridX;
+        this.mujiY = gridY;
+        View.setMujiPos(gridX, gridY);
+    },
+    setAdidasPos: function(gridX, gridY) {
+        this.adidasX = gridX;
+        this.adidasY = gridY;
+        View.setAdidasPos(gridX, gridY);
+    },
+    setNikePos: function(gridX, gridY) {
+        this.nikeX = gridX;
+        this.nikeY = gridY;
+        View.setNikePos(gridX, gridY);
+    },
+    setUniqloPos: function(gridX, gridY) {
+        this.uniqloX = gridX;
+        this.uniqloY = gridY;
+        View.setUniqloPos(gridX, gridY);
+    },
+    setBurgerPos: function(gridX, gridY) {
+        this.burgerX = gridX;
+        this.burgerY = gridY;
+        View.setBurgerPos(gridX, gridY);
+    },
+    
     setWalkableAt: function(gridX, gridY, walkable) {
         this.grid.setWalkableAt(gridX, gridY, walkable);
         View.setAttributeAt(gridX, gridY, 'walkable', walkable);
@@ -627,8 +673,35 @@ $.extend(Controller, {
     isFirePos: function(gridX, gridY) {
         return gridX === this.fireX && gridY === this.fireY;
     },
+    isCarrefourPos: function(gridX, gridY) {
+        return gridX === this.carrefourX && gridY === this.carrefourY;
+    },
+    isApplePos: function(gridX, gridY) {
+        return gridX === this.appleX && gridY === this.appleY;
+    },
+    isMacdonaldPos: function(gridX, gridY) {
+        return gridX === this.macdonaldX && gridY === this.macdonaldY;
+    },
+    isStarbucksPos: function(gridX, gridY) {
+        return gridX === this.starbucksX && gridY === this.starbucksY;
+    },
+    isMujiPos: function(gridX, gridY) {
+        return gridX === this.mujiX && gridY === this.mujiY;
+    },
+    isAdidasPos: function(gridX, gridY) {
+        return gridX === this.adidasX && gridY === this.adidasY;
+    },
+    isNikePos: function(gridX, gridY) {
+        return gridX === this.nikeX && gridY === this.nikeY;
+    },
+    isUniqloPos: function(gridX, gridY) {
+        return gridX === this.uniqloX && gridY === this.uniqloY;
+    },
+    isBurgerPos: function(gridX, gridY) {
+        return gridX === this.burgerX && gridY === this.burgerY;
+    },
     isStartOrEndPos: function(gridX, gridY) {
-        return this.isStartPos(gridX, gridY) || this.isEndPos(gridX, gridY) || this.isFirePos(gridX, gridY);
+        return this.isStartPos(gridX, gridY) || this.isEndPos(gridX, gridY) || this.isFirePos(gridX, gridY) || this.isCarrefourPos(gridX, gridY)|| this.isApplePos(gridX, gridY)|| this.isMacdonaldPos(gridX, gridY)|| this.isStarbucksPos(gridX, gridY)|| this.isMujiPos(gridX, gridY)|| this.isAdidasPos(gridX, gridY)|| this.isNikePos(gridX, gridY)|| this.isUniqloPos(gridX, gridY)|| this.isBurgerPos(gridX, gridY);
     },
     
           

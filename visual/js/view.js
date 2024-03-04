@@ -197,6 +197,132 @@ var View = {
             this.fireNode.attr({ x: coord[0], y: coord[1] }).toFront();
         }
     },
+    setCarrefourPos: function(gridX, gridY) {
+        var coord = this.toPageCoordinate(gridX, gridY);
+        if (!this.carrefourNode) {
+            this.carrefourNode = this.paper.rect(
+                coord[0],
+                coord[1],
+                this.nodeSize,
+                this.nodeSize
+            ).attr(this.nodeStyle.normal)
+             .animate(this.nodeStyle.carrefour, 10);
+        } else {
+            this.carrefourNode.attr({ x: coord[0], y: coord[1] }).toFront();
+        }
+    },
+    setApplePos: function(gridX, gridY) {
+        var coord = this.toPageCoordinate(gridX, gridY);
+        if (!this.appleNode) {
+            this.appleNode = this.paper.rect(
+                coord[0],
+                coord[1],
+                this.nodeSize,
+                this.nodeSize
+            ).attr(this.nodeStyle.normal)
+             .animate(this.nodeStyle.apple, 10);
+        } else {
+            this.appleNode.attr({ x: coord[0], y: coord[1] }).toFront();
+        }
+    },
+    setMacdonaldPos: function(gridX, gridY) {
+        var coord = this.toPageCoordinate(gridX, gridY);
+        if (!this.macdonaldNode) {
+            this.macdonaldNode = this.paper.rect(
+                coord[0],
+                coord[1],
+                this.nodeSize,
+                this.nodeSize
+            ).attr(this.nodeStyle.normal)
+             .animate(this.nodeStyle.macdonald, 10);
+        } else {
+            this.macdonaldNode.attr({ x: coord[0], y: coord[1] }).toFront();
+        }
+    },
+    setStarbucksPos: function(gridX, gridY) {
+        var coord = this.toPageCoordinate(gridX, gridY);
+        if (!this.starbucksNode) {
+            this.starbucksNode = this.paper.rect(
+                coord[0],
+                coord[1],
+                this.nodeSize,
+                this.nodeSize
+            ).attr(this.nodeStyle.normal)
+             .animate(this.nodeStyle.starbucks, 10);
+        } else {
+            this.starbucksNode.attr({ x: coord[0], y: coord[1] }).toFront();
+        }
+    },
+    setMujiPos: function(gridX, gridY) {
+        var coord = this.toPageCoordinate(gridX, gridY);
+        if (!this.mujiNode) {
+            this.mujiNode = this.paper.rect(
+                coord[0],
+                coord[1],
+                this.nodeSize,
+                this.nodeSize
+            ).attr(this.nodeStyle.normal)
+             .animate(this.nodeStyle.muji, 10);
+        } else {
+            this.mujiNode.attr({ x: coord[0], y: coord[1] }).toFront();
+        }
+    },
+    setAdidasPos: function(gridX, gridY) {
+        var coord = this.toPageCoordinate(gridX, gridY);
+        if (!this.adidasNode) {
+            this.adidasNode = this.paper.rect(
+                coord[0],
+                coord[1],
+                this.nodeSize,
+                this.nodeSize
+            ).attr(this.nodeStyle.normal)
+             .animate(this.nodeStyle.adidas, 10);
+        } else {
+            this.adidasNode.attr({ x: coord[0], y: coord[1] }).toFront();
+        }
+    },
+    setNikePos: function(gridX, gridY) {
+        var coord = this.toPageCoordinate(gridX, gridY);
+        if (!this.nikeNode) {
+            this.nikeNode = this.paper.rect(
+                coord[0],
+                coord[1],
+                this.nodeSize,
+                this.nodeSize
+            ).attr(this.nodeStyle.normal)
+             .animate(this.nodeStyle.nike, 10);
+        } else {
+            this.nikeNode.attr({ x: coord[0], y: coord[1] }).toFront();
+        }
+    },
+    setUniqloPos: function(gridX, gridY) {
+        var coord = this.toPageCoordinate(gridX, gridY);
+        if (!this.uniqloNode) {
+            this.uniqloNode = this.paper.rect(
+                coord[0],
+                coord[1],
+                this.nodeSize,
+                this.nodeSize
+            ).attr(this.nodeStyle.normal)
+             .animate(this.nodeStyle.uniqlo, 10);
+        } else {
+            this.uniqloNode.attr({ x: coord[0], y: coord[1] }).toFront();
+        }
+    },
+    setBurgerPos: function(gridX, gridY) {
+        var coord = this.toPageCoordinate(gridX, gridY);
+        if (!this.burgerNode) {
+            this.burgerNode = this.paper.rect(
+                coord[0],
+                coord[1],
+                this.nodeSize,
+                this.nodeSize
+            ).attr(this.nodeStyle.normal)
+             .animate(this.nodeStyle.burger, 10);
+        } else {
+            this.burgerNode.attr({ x: coord[0], y: coord[1] }).toFront();
+        }
+    },
     /**
      * Set the attribute of the node at the given coordinate.
      */

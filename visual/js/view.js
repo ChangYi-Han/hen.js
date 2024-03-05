@@ -156,19 +156,44 @@ var View = {
         });
     },
     setStartPos: function(gridX, gridY) {
-        var coord = this.toPageCoordinate(gridX, gridY);
-        if (!this.startNode) {
-            this.startNode = this.paper.rect(
-                coord[0],
-                coord[1],
-                this.nodeSize,
-                this.nodeSize
-            ).attr(this.nodeStyle.normal)
-             .animate(this.nodeStyle.start, 10);
-        } else {
-            this.startNode.attr({ x: coord[0], y: coord[1] }).toFront();
-        }
-    },
+    var self = this; // 將this存儲在變數中以在嵌套函式中使用
+    var coord = this.toPageCoordinate(gridX, gridY);
+    
+    // 添加觸摸事件監聽器到startNode元素
+    this.startNode.addEventListener('touchstart', function(e) {
+        var touch = e.touches[0];
+        // 記錄觸摸點的初始位置
+        self.startX = touch.clientX - coord[0];
+        self.startY = touch.clientY - coord[1];
+    });
+
+    this.startNode.addEventListener('touchmove', function(e) {
+        // 阻止預設的滾動行為
+        e.preventDefault();
+        var touch = e.touches[0];
+        // 計算節點新的位置
+        var newX = touch.clientX - self.startX;
+        var newY = touch.clientY - self.startY;
+        // 更新節點的位置
+        self.startNode.style.left = newX + 'px';
+        self.startNode.style.top = newY + 'px';
+    });
+
+    // 創建或更新節點的位置
+    if (!this.startNode) {
+        this.startNode = this.paper.rect(
+            coord[0],
+            coord[1],
+            this.nodeSize,
+            this.nodeSize
+        ).attr(this.nodeStyle.normal)
+         .animate(this.nodeStyle.start, 10);
+    } else {
+        this.startNode.style.left = coord[0] + 'px';
+        this.startNode.style.top = coord[1] + 'px';
+    }
+},
+
     setEndPos: function(gridX, gridY) {
         var coord = this.toPageCoordinate(gridX, gridY);
         if (!this.endNode) {

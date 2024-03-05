@@ -479,10 +479,10 @@ $.extend(Controller, {
         centerX = Math.ceil(availWidth / 2 / nodeSize);
         centerY = Math.floor(height / 2 / nodeSize);
         if (this.startNode) {
-        this.setStartPos(gridX, gridY);
+        this.setStartPos(3, 4);
         }
 
-        this.setStartPos(3,4);//(centerX - 5, centerY);
+        //this.setStartPos(3,4);//(centerX - 5, centerY);
         
         this.setWalkableAt(3, 1, false)
         this.setNikePos(4, 1)

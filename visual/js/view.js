@@ -26,11 +26,11 @@ var View = {
             'stroke-opacity': 0.2,
         },
         carrefour: {
-            fill: 'url(#carryfour)',
+            fill: 'darkblue',
             'stroke-opacity': 0.2,
         },
         apple: {
-            fill: 'url(#apple)',
+            fill: 'black',
             'stroke-opacity': 0.2,
         },
         macdonald: {

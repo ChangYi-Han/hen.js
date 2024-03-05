@@ -156,19 +156,22 @@ var View = {
         });
     },
     setStartPos: function(gridX, gridY) {
-        var coord = this.toPageCoordinate(gridX, gridY);
-        if (!this.startNode) {
-            this.startNode = this.paper.rect(
-                coord[0],
-                coord[1],
-                this.nodeSize,
-                this.nodeSize
-            ).attr(this.nodeStyle.normal)
-             .animate(this.nodeStyle.start, 10);
-        } else {
-            this.startNode.attr({ x: coord[0], y: coord[1] }).toFront();
-        }
-    },
+    var coord = this.toPageCoordinate(gridX, gridY);
+    // 創建或更新startNode
+    if (!this.startNode) {
+        // 如果startNode不存在，則創建一個新的startNode
+        this.startNode = this.paper.rect(
+            coord[0],
+            coord[1],
+            this.nodeSize,
+            this.nodeSize
+        ).attr(this.nodeStyle.start);
+    } else {
+        // 如果startNode已存在，則更新其位置
+        this.startNode.attr({ x: coord[0], y: coord[1] }).toFront();
+    }
+},
+
 
     setEndPos: function(gridX, gridY) {
         var coord = this.toPageCoordinate(gridX, gridY);

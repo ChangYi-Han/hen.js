@@ -454,7 +454,6 @@ var View = {
      * Helper function to convert the page coordinate to grid coordinate
      */
     toGridCoordinate: function(pageX, pageY) {
-        var touch = event.touches[0]; // 獲取第一個觸控點
         return [
             Math.floor(touch.pageX / this.nodeSize),
             Math.floor(touch.pageY / this.nodeSize)

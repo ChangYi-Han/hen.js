@@ -404,17 +404,19 @@ $.extend(Controller, {
             this.eraseWall(gridX, gridY);
         }
     },
-    mousemove: function(event) {
-        var coord = View.toGridCoordinate(event.pageX, event.pageY),
-            grid = this.grid,
-            gridX = coord[0],
-            gridY = coord[1];
+    touchmove: function(event) {
+    // 獲取觸控點的位置
+    var touch = event.touches[0];
+    var coord = View.toGridCoordinate(touch.pageX, touch.pageY),
+        grid = this.grid,
+        gridX = coord[0],
+        gridY = coord[1];
 
-        if (this.isStartOrEndPos(gridX, gridY)) {
-            return;
-        }
+    if (this.isStartOrEndPos(gridX, gridY)) {
+        return;
+    }
 
-        switch (this.current) {
+    switch (this.current) {
         case 'draggingStart':
             if (grid.isWalkableAt(gridX, gridY)) {
                 this.setStartPos(gridX, gridY);
@@ -431,8 +433,9 @@ $.extend(Controller, {
         case 'erasingWall':
             this.setWalkableAt(gridX, gridY, true);
             break;
-        }
-    },
+    }
+},
+
     mouseup: function(event) {
         if (Controller.can('rest')) {
             Controller.rest();

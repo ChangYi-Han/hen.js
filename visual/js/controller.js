@@ -404,6 +404,29 @@ $.extend(Controller, {
             this.eraseWall(gridX, gridY);
         }
     },
+    // 將滑鼠事件改為觸控事件
+    touchmove: function(event) {
+        // 獲取觸控點的位置
+        var touch = event.touches[0];
+        var coord = View.toGridCoordinate(touch.pageX, touch.pageY),
+            grid = this.grid,
+            gridX = coord[0],
+            gridY = coord[1];
+    
+        if (this.isStartOrEndPos(gridX, gridY)) {
+            return;
+        }
+    
+        switch (this.current) {
+            case 'draggingStart':
+                if (grid.isWalkableAt(gridX, gridY)) {
+                    this.setStartPos(gridX, gridY);
+                }
+                break;
+            
+        }
+    }
+
     mousemove: function(event) {
         var coord = View.toGridCoordinate(event.pageX, event.pageY),
             grid = this.grid,

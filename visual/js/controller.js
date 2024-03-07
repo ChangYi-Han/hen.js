@@ -728,7 +728,7 @@ $.extend(Controller, {
                 break;
             
         }
-    }
+    },
     
           
     

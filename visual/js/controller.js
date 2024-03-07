@@ -404,8 +404,6 @@ $.extend(Controller, {
             this.eraseWall(gridX, gridY);
         }
     },
-    
-
     mousemove: function(event) {
         var coord = View.toGridCoordinate(event.pageX, event.pageY),
             grid = this.grid,
@@ -435,7 +433,6 @@ $.extend(Controller, {
             break;
         }
     },
-    
     mouseup: function(event) {
         if (Controller.can('rest')) {
             Controller.rest();
@@ -707,7 +704,6 @@ $.extend(Controller, {
     isStartOrEndPos: function(gridX, gridY) {
         return this.isStartPos(gridX, gridY) || this.isEndPos(gridX, gridY) || this.isFirePos(gridX, gridY) || this.isCarrefourPos(gridX, gridY)|| this.isApplePos(gridX, gridY)|| this.isMacdonaldPos(gridX, gridY)|| this.isStarbucksPos(gridX, gridY)|| this.isMujiPos(gridX, gridY)|| this.isAdidasPos(gridX, gridY)|| this.isNikePos(gridX, gridY)|| this.isUniqloPos(gridX, gridY)|| this.isBurgerPos(gridX, gridY);
     },
-
     
           
     

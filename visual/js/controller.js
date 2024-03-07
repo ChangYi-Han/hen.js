@@ -707,28 +707,7 @@ $.extend(Controller, {
     isStartOrEndPos: function(gridX, gridY) {
         return this.isStartPos(gridX, gridY) || this.isEndPos(gridX, gridY) || this.isFirePos(gridX, gridY) || this.isCarrefourPos(gridX, gridY)|| this.isApplePos(gridX, gridY)|| this.isMacdonaldPos(gridX, gridY)|| this.isStarbucksPos(gridX, gridY)|| this.isMujiPos(gridX, gridY)|| this.isAdidasPos(gridX, gridY)|| this.isNikePos(gridX, gridY)|| this.isUniqloPos(gridX, gridY)|| this.isBurgerPos(gridX, gridY);
     },
-    // 將滑鼠事件改為觸控事件
-    touchmove: function(event) {
-        // 獲取觸控點的位置
-        var touch = event.touches[0];
-        var coord = View.toGridCoordinate(touch.pageX, touch.pageY),
-            grid = this.grid,
-            gridX = coord[0],
-            gridY = coord[1];
-    
-        if (this.isStartOrEndPos(gridX, gridY)) {
-            return;
-        }
-    
-        switch (this.current) {
-            case 'draggingStart':
-                if (grid.isWalkableAt(gridX, gridY)) {
-                    this.setStartPos(gridX, gridY);
-                }
-                break;
-            
-        }
-    },
+
     
           
     

@@ -454,11 +454,13 @@ var View = {
      * Helper function to convert the page coordinate to grid coordinate
      */
     toGridCoordinate: function(pageX, pageY) {
+        var touch = event.touches[0]; // 獲取第一個觸控點
         return [
-            Math.floor(pageX / this.nodeSize),
-            Math.floor(pageY / this.nodeSize)
+            Math.floor(touch.pageX / this.nodeSize),
+            Math.floor(touch.pageY / this.nodeSize)
         ];
     },
+
     /**
      * helper function to convert the grid coordinate to page coordinate
      */

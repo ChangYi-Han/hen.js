@@ -455,8 +455,8 @@ var View = {
      */
     toGridCoordinate: function(pageX, pageY) {
         return [
-            Math.floor(touch.pageX / this.nodeSize),
-            Math.floor(touch.pageY / this.nodeSize)
+            Math.floor(pageX / this.nodeSize),
+            Math.floor(pageY / this.nodeSize)
         ];
     },
 
